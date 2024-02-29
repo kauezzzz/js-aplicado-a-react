@@ -14,7 +14,9 @@
 
 
 
-    //1ª Digitação (aqui) 
+    function ordenar(...parametros) {
+      return parametros.sort();
+    }
 
 
 
@@ -30,7 +32,8 @@
 
 
 
-    //2ª Digitação (aqui) 
+    exibirNaTela(cursos);
+    exibirNaTela( ordenar(...cursos));
 
 
 
@@ -56,7 +59,10 @@
 
 
 
-    //3ª Digitação (aqui) 
+    const testeOrdenar = (...parametros) => parametros.sort();
+
+    exibirNaTela( testeOrdenar ('Jair', 'Larissa', 'Andrea'));
+    exibirNaTela( testeOrdenar ('RHCP', 'Mega Death', 'Metallica', 'Rush', 'Pink Floyd'));
 
 
 
@@ -65,8 +71,16 @@
 
 
 
-    //4ª Digitação (aqui) 
+    const somaValores = (...valores) => {
+      let total = 0;
 
+      for(let valor of valores) {
+        total += valor;
+      }
+      return total;
+    }
+    
+    exibirNaTela('======================');
     
 
     function exibirNaTela(texto) {
